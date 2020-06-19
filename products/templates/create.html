@@ -1,0 +1,41 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="row">
+  <div
+    class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4"
+  >
+    <h4>Create</h4>
+    <div class="text-left text-danger pt-2">
+      {% if error %} {{ error }} {% endif %}
+    </div>
+    <div class="text-left pt-3">
+      <form
+        method="POST"
+        action="{% url 'create' %}"
+        autocomplete="off"
+        enctype="multipart/form-data"
+      >
+        {% csrf_token %} Title:
+        <br />
+        <input type="text" name="title" class="form-control mb-2" />
+        Body:
+        <br />
+        <textarea type="text" name="body" class="form-control mb-2"></textarea>
+        URL:
+        <br />
+        <input type="text" name="url" class="form-control mb-2" />
+        Icon:
+        <br />
+        <input type="file" name="icon" class="custom-file mb-2" />
+        <br />
+        Image:
+        <br />
+        <input type="file" name="image" class="custom-file mb-2" />
+        <br />
+        <br />
+        <input class="btn btn-primary" type="submit" value="Add product!" />
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
