@@ -1,4 +1,4 @@
-# Django Product Hunt Clone
+# Pr0ductWave
 
 ## Prerequisites
 
@@ -12,12 +12,12 @@ Before running this project, ensure you have the following installed:
 Create a PostgreSQL database and user with the following credentials:
 
 ```sql
-CREATE DATABASE producthuntdb;
+CREATE DATABASE pr0ductwavedb;
 CREATE USER test WITH PASSWORD 'test';
 ALTER ROLE test SET client_encoding TO 'utf8';
 ALTER ROLE test SET default_transaction_isolation TO 'read committed';
 ALTER ROLE test SET timezone TO 'UTC';
-GRANT ALL PRIVILEGES ON DATABASE producthuntdb TO test;
+GRANT ALL PRIVILEGES ON DATABASE pr0ductwavedb TO test;
 ```
 
 Ensure your `settings.py` has the correct database configuration:
@@ -26,7 +26,7 @@ Ensure your `settings.py` has the correct database configuration:
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'producthuntdb',
+        'NAME': 'pr0ductwavedb',
         'USER': 'test',
         'PASSWORD': 'test',
         'HOST': 'localhost',
@@ -39,8 +39,8 @@ DATABASES = {
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/xscotophilic/django-producthunt-clone.git
-cd django-producthunt-clone
+git clone https://github.com/xscotophilic/pr0ductwave.git
+cd pr0ductwave
 ```
 
 ### 2. Using the Makefile

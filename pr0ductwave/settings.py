@@ -29,12 +29,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'producthunt.urls'
+ROOT_URLCONF = 'pr0ductwave.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['producthunt/templates'],
+        'DIRS': ['pr0ductwave/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -47,7 +47,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'producthunt.wsgi.application'
+WSGI_APPLICATION = 'pr0ductwave.wsgi.application'
 
 
 # Database
@@ -56,7 +56,7 @@ WSGI_APPLICATION = 'producthunt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'producthuntdb',
+        'NAME': 'pr0ductwavedb',
         'USER': 'test',
         'PASSWORD': 'test',
         'HOST': 'localhost',
@@ -102,7 +102,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'producthunt/static/')
+    os.path.join(BASE_DIR, 'pr0ductwave/static/')
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
