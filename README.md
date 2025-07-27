@@ -1,15 +1,23 @@
 # Pr0ductWave
 
+Pr0ductWave is a platform where users can **post, discover, and support new products**.
+
+## Features
+
+- Submit and share new product ideas with the community
+- Discover trending and new products posted by others
+- Support and engage with your favorite products
+
 ## Prerequisites
 
-Before running this project, ensure you have the following installed:
+Before running Pr0ductWave locally, ensure you have:
 
-- **Python** (>=3.9)
-- **PostgreSQL** (>=12)
+- **Python 3.9 or higher**
+- **PostgreSQL 12 or higher**
 
-### PostgreSQL Database Setup
+## PostgreSQL Database Setup
 
-Create a PostgreSQL database and user with the following credentials:
+Create a database and user for the application with the following commands in your PostgreSQL shell:
 
 ```sql
 CREATE DATABASE pr0ductwavedb;
@@ -20,7 +28,7 @@ ALTER ROLE test SET timezone TO 'UTC';
 GRANT ALL PRIVILEGES ON DATABASE pr0ductwavedb TO test;
 ```
 
-Ensure your `settings.py` has the correct database configuration:
+Ensure these credentials match your Django `settings.py` database configuration:
 
 ```python
 DATABASES = {
@@ -38,52 +46,61 @@ DATABASES = {
 ## Setup Instructions
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/xscotophilic/pr0ductwave.git
 cd pr0ductwave
 ```
 
-### 2. Using the Makefile
+### 2. Use the Makefile to Simplify Setup
 
-This project includes a `Makefile` to simplify setup. Run the following commands:
+The project includes a Makefile with commands to automate setup steps:
 
-#### **Create and Activate Virtual Environment**
-```bash
-make venv
-```
+- **Create and activate virtual environment**
 
-#### **Install Dependencies**
-```bash
-make install
-```
+  ```bash
+  make venv
+  ```
 
-#### **Apply Migrations**
-```bash
-make migrate
-```
+- **Install project dependencies**
 
-#### **Create a Superuser (Optional)**
-```bash
-make createsuperuser
-```
+  ```bash
+  make install
+  ```
 
-#### **Run the Development Server**
-```bash
-make run
-```
+- **Apply database migrations**
 
-The project will be available at `http://127.0.0.1:8000/`.
+  ```bash
+  make migrate
+  ```
 
-#### **Freeze Dependencies (if you modify them)**
-```bash
-make freeze
-```
+- **Create a superuser (optional, for admin access)**
 
-#### **Clean Up**
-To remove the virtual environment and temporary files:
-```bash
-make clean
-```
+  ```bash
+  make createsuperuser
+  ```
+
+- **Run the development server**
+
+  ```bash
+  make run
+  ```
+
+Server will be accessible at [http://127.0.0.1:8000/](http://127.0.0.1:8000/).
+
+### Additional Make commands
+
+- **Freeze current dependency versions**
+
+  ```bash
+  make freeze
+  ```
+
+- **Clean up virtual environment and temporary files**
+
+  ```bash
+  make clean
+  ```
 
 ## License
 
